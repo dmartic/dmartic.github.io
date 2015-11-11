@@ -1,0 +1,356 @@
+@import "../libs/bootstrap-3.3.5/less/variables.less";
+
+/* --- font-face ---*/
+
+@font-face {
+  font-family: 'source_sans_prolight';
+  src: url('../fonts/SourceSansPro-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'source_sans_prolight_italic';
+  src: url('../fonts/SourceSansPro-LightItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'source_sans_prosemibold';
+  src: url('../fonts/SourceSansPro-Semibold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'source_sans_proSBdIt';
+  src: url('../fonts/SourceSansPro-SemiboldItalic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+/* fontello icons */
+
+@font-face {
+  font-family: 'up';
+  src: url('../libs/fontello-38b787a4/font/up.eot?53667119');
+  src: url('../libs/fontello-38b787a4/font/up.eot?53667119#iefix') format('embedded-opentype'),
+  url('../libs/fontello-38b787a4/font/up.woff?53667119') format('woff'),
+  url('../libs/fontello-38b787a4/font/up.ttf?53667119') format('truetype'),
+  url('../libs/fontello-38b787a4/font/up.svg?53667119#up') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/*font-family for strong & bold*/
+strong, .strong {
+  font-family: 'source_sans_prosemibold';
+}
+
+
+
+
+
+/* --- Navigation --- */
+
+nav, .navbar {
+  background-color: @primary-blue;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* Logo position */
+.logo-margin {
+  margin-top: 25px;
+  margin-left: 50px;
+}
+
+/* Navigation links position */
+
+nav ul {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+nav li {
+  font-size: @font-size-h4;
+  display: inline-block;
+  margin-right: 50px;
+  padding: 0;
+}
+
+nav .navbar-nav li a {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+nav li a, .back-to-top {
+  display: inline-block;
+  padding-bottom: 10px !important;
+
+  &:hover{
+    display: inline-block;
+    box-shadow: inset 0 -4px 0px 0px @secondary-red;
+  }
+}
+
+/* Collapsed button border */
+.navbar-toggle {
+  border: none;
+}
+
+/* --- Header --- */
+
+header {
+  background: url(../img/hero-background.png) fixed left bottom;
+  background-size: cover;
+  height: 600px;
+  color: #fff;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  header {
+    background-image: url(../img/hero-background@2x.png) fixed left bottom;
+  }
+
+}
+
+
+/* Content vertically centered */
+
+header .container{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header img{
+  border-radius: 100%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.5);
+  width: 250px;
+  height: 250px;
+}
+
+
+/* Header content space */
+.right-margin {
+  margin-right: 30px;
+}
+
+/* Heading top margin */
+.top-pull {
+  margin-top: 0;
+}
+
+/* Button style */
+a[role="button"] {
+  border-radius: 2px;
+  text-transform: uppercase;
+  padding: 5px 25px;
+
+  &:hover{
+    background-color: @secondary-red;
+    border-color: darken(@secondary-red, 5%)
+  }
+}
+
+
+
+@media (max-width: 768px){
+  header .container{
+    text-align: center;
+  }
+  header img{
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* --- Main --- */
+
+.container-margin {
+  margin: 0 auto;
+  padding-top: 75px;
+}
+
+.heading-subtitle {
+  color: @secondary-red;
+  font-style: italic;
+}
+
+/* hr decoration */
+.subtitle-divider {
+  border-top: 3px solid @secondary-red;
+  width: 40px;
+}
+
+/* border for "Features" */
+.heading-main {
+  display: inline-block;
+  padding-bottom: 10px;
+  border-bottom: 3px solid @secondary-red;
+}
+
+.feature-one-icon{
+  background-image: url(../img/feature-one-icon.png);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  .feature-one-icon {
+    background-image: url(../img/feature-one-icon@2x.png);
+  }
+
+}
+
+.feature-two-icon{
+  background-image: url(../img/feature-two-icon.png);
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  .feature-two-icon {
+    background-image: url(../img/feature-two-icon@2x.png);
+  }
+
+}
+
+.feature-three-icon{
+  background-image: url(../img/feature-three-icon.png);
+  width: 61px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+  .feature-three-icon {
+    background-image: url(../img/feature-three-icon@2x.png);
+  }
+
+}
+
+
+.article-margin {
+  margin-top: 75px;
+}
+
+.article-padding {
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+.push-footer {
+  margin-bottom: 200px;
+}
+
+/* --- Footer -- */
+
+footer {
+  color: #fff;
+  background-color: @primary-blue;
+  min-height: 400px;
+  padding-bottom: 20px;
+}
+
+.social-buttons {
+  width: 44px;
+  height: 44px;
+}
+
+.center-content a {
+  display: inline-block;
+}
+
+@media(max-width:768px) {
+  .center-content {
+    display: block;
+    text-align: center;
+  }
+}
+
+/* back to top style */
+.back-to-top {
+  margin-top: 50px;
+  margin-right: 90px;
+  font-size: @font-size-h3;
+}
+
+@media (max-width: 992px){
+  .back-to-top {
+    margin-right: 20px;
+  }
+}
+
+/* arrow */
+
+.up-icon
+{
+  font-family: "up";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  font-size: 60%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.up-icon:before { content: '\e800'; } /* '' */
+
+
+.info-footer {
+  line-height: 35px;
+}
+
+.push-top {
+  margin-top: 105px;
+}
+
+/*arsfutura logo*/
+.logo-footer {
+  display: block;
+  margin: 70px auto 0 auto;
+}
