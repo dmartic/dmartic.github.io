@@ -1,2 +1,1 @@
-# arsfutura-task
-Landing page task
+# GitHub Pages
